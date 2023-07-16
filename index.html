@@ -4,13 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jo-Ken-Po</title>
+    <!-- links de css -->
+    <link rel="stylesheet" href="/assets/css/header.css">
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/botoes.css">
+
 </head>
 <body>
-    <button type="button" id="pedra">Pedra</button>
-    <button type="button" id="papel" >Papel</button>
-    <button type="button" id="tesoura">Tesoura</button>
-
-
-<script src="script.js"></script>
+    <header>
+        <h1>Jo-Ken-Po</h1>
+    </header>
+    
+    <section>
+        <div class="main">
+            <div class="escolha">
+                <button type="button" class="btn" id="pedra"><i id="punho" class="fa-solid fa-hand-back-fist"></i> Pedra</button>
+                <button type="button" class="btn" id="papel" ><i class="fa-solid fa-hand"></i> Papel</button>
+                <button type="button" class="btn" id="tesoura"><i class="fa-solid fa-hand-scissors"></i> Tesoura</button>
+            </div>
+        </div>
+    </section>
+    
+    
+    <script src="https://kit.fontawesome.com/5dfb4ac132.js" crossorigin="anonymous"></script>
+    <script src="/assets/js/script.js"></script>
 </body>
 </html>

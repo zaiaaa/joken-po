@@ -1,0 +1,99 @@
+.escolha{
+   text-align: center;
+}
+.btn{
+    width: 20rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: .825rem;
+    font-size: 20px;
+    font-weight: 600;
+}
+.btn i{
+    margin-right: 6.2rem;
+    font-size: 23px;
+}
+
+/* estilizando o botao da tesoura */
+#tesoura{
+    border: 1px solid #000;
+    outline: none;
+    background-color: transparent;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: .4s;
+    border-radius: 2rem;
+}
+#tesoura i{
+    transform: rotate(90deg);
+    color: rgb(53, 53, 231);
+    transition: .4s;
+    margin-right: 5.5rem;
+}
+#tesoura:hover i{
+    color: #fff;
+    transition: .4s;
+    transform: rotate(0deg);
+}
+#tesoura:hover{
+    background-color: rgb(53, 53, 231);
+    color: #fff;
+    transition: .4s;
+}
+/* ----------------------------------- */
+
+
+
+/* estilizando o botao do papel */
+#papel{
+    border: 1px solid #000;
+    outline: none;
+    background-color: transparent;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: .4s;
+    border-radius: 2rem;
+}
+#papel i{
+    color:gray;
+    transition: .4s;
+}
+#papel:hover i{
+    color: #fff;
+    transition: .4s;
+    transform: rotate(-90deg);
+}
+#papel:hover{
+    background-color: gray;
+    color: #fff;
+    transition: .4s;
+}
+/* ------------------------------------- */
+
+/* Estilizando o botao da pedra */
+#pedra{
+    border: 1px solid #000;
+    outline: none;
+    background-color: transparent;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: .4s;
+    border-radius: 2rem;
+}
+#pedra i{
+    color: red;
+    transition: .4s;
+}
+#pedra:hover i{
+    color: #fff;
+    transition: .4s;
+    transform: rotate(-90deg);
+}
+#pedra:hover{
+    background-color: red;
+    color: #fff;
+    transition: .4s;
+}
+/* --------------------------------- */
+
