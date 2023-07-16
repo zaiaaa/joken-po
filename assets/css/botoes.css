@@ -1,5 +1,5 @@
 .escolha{
-   text-align: center;
+    text-align: center;
 }
 .btn{
     width: 20rem;
@@ -29,7 +29,7 @@
     transform: rotate(90deg);
     color: rgb(53, 53, 231);
     transition: .4s;
-    margin-right: 5.5rem;
+    margin-right: 5.4rem;
 }
 #tesoura:hover i{
     color: #fff;

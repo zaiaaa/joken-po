@@ -1,6 +1,14 @@
 const pedra = document.getElementById('pedra')
 const papel = document.getElementById('papel')
 const tesoura = document.getElementById('tesoura')
+const yourChoose = document.getElementById('yourChoose')
+const machineChoose = document.getElementById('machineChoose')
+const resultadoHTML = document.getElementById('Result')
+
+const tagIconRock = '<i id="punho" class="fa-solid fa-hand-back-fist punho"></i>'
+const tagIconPaper = '<i class="fa-solid fa-hand papel"></i>'
+const tagIconScissors = '<i class="fa-solid fa-hand-scissors tesoura"></i>'
+
 // const punho = document.getElementById('punho')
 
 // punho.addEventListener('mouseenter', () => {
@@ -37,44 +45,133 @@ function maquinaEscolheu(){
 function resultado(pessoa, maquina){
     //caso o usuário escolha pedra
     if(pessoa == 'pedra' & maquina == 'pedra'){
-        console.log('você jogou ' + pessoa)
-        console.log('a máquina jogou ' + maquina)
-        console.log('empate')
+        yourChoose.innerHTML = `
+        <h3>Você escolheu pedra:</h3>
+        ${tagIconRock}
+        `
+        
+        machineChoose.innerHTML = `
+        ${tagIconRock}
+        <h3>A máquina escolheu pedra:</h3>
+        `
+
+        resultadoHTML.innerHTML = `                
+        <h1 class="empate">Empate</h1>
+        `
     }else if (pessoa == 'pedra' && maquina == 'papel'){
-        console.log('você jogou ' + pessoa)
-        console.log('a máquina jogou ' + maquina)
-        console.log('Derrota')
+        yourChoose.innerHTML = `
+        <h3>Você escolheu pedra:</h3>
+        ${tagIconRock}
+        `
+
+        machineChoose.innerHTML = `
+        ${tagIconPaper}
+        <h3>A máquina escolheu papel:</h3>
+        `
+
+        resultadoHTML.innerHTML = `                
+        <h1 class="derrota">Derrota</h1>
+        `
     }else if(pessoa == 'pedra' && maquina == 'tesoura'){
-        console.log('você jogou ' + pessoa)
-        console.log('a máquina jogou ' + maquina)
-        console.log('Vitória!')
+        yourChoose.innerHTML = `
+        <h3>Você escolheu pedra:</h3>
+        ${tagIconRock}
+        `
+        
+        machineChoose.innerHTML = `
+        ${tagIconScissors}
+        <h3>A máquina escolheu tesoura:</h3>
+        `
+
+        resultadoHTML.innerHTML = `                
+        <h1 class="vitoria">Vitória</h1>
+        `
     }//Caso o usuário escolha papel
     else if(pessoa == 'papel' & maquina == 'pedra'){
-        console.log('você jogou ' + pessoa)
-        console.log('a máquina jogou ' + maquina)
-        console.log('Vitória')
+        yourChoose.innerHTML = `
+        <h3>Você escolheu papel:</h3>
+        ${tagIconPaper}
+        `
+        
+        machineChoose.innerHTML = `
+        ${tagIconRock}
+        <h3>A máquina escolheu pedra:</h3>
+        `
+
+        resultadoHTML.innerHTML = `                
+        <h1 class="vitoria">Vitória</h1>
+        `
     }else if (pessoa == 'papel' && maquina == 'papel'){
-        console.log('você jogou ' + pessoa)
-        console.log('a máquina jogou ' + maquina)
-        console.log('Empate')
+        yourChoose.innerHTML = `
+        <h3>Você escolheu papel:</h3>
+        ${tagIconPaper}
+        `
+        
+        machineChoose.innerHTML = `
+        ${tagIconPaper}
+        <h3>A máquina escolheu papel:</h3>
+        `
+
+        resultadoHTML.innerHTML = `                
+        <h1 class="empate">Empate</h1>
+        `
     }else if(pessoa == 'papel' && maquina == 'tesoura'){
-        console.log('você jogou ' + pessoa)
-        console.log('a máquina jogou ' + maquina)
-        console.log('Derrota')
+        
+        yourChoose.innerHTML = `
+        <h3>Você escolheu papel:</h3>
+        ${tagIconPaper}
+        `
+        
+        machineChoose.innerHTML = `
+        ${tagIconScissors}
+        <h3>A máquina escolheu tesoura:</h3>
+        `
+
+        resultadoHTML.innerHTML = `                
+        <h1 class="derrota">Derrota</h1>
+        `
     }//Caso o usuário escolha tesoura
     else if(pessoa == 'tesoura' & maquina == 'pedra'){
-        console.log('você jogou ' + pessoa)
-        console.log('a máquina jogou ' + maquina)
-        console.log('Derrota')
+        yourChoose.innerHTML = `
+        <h3>Você escolheu tesoura:</h3>
+        ${tagIconScissors}
+        `
+        
+        machineChoose.innerHTML = `
+        ${tagIconRock}
+        <h3>A máquina escolheu pedra:</h3>
+        `
+
+        resultadoHTML.innerHTML = `                
+        <h1 class="derrota">Derrota</h1>
+        `
     }else if (pessoa == 'tesoura' && maquina == 'papel'){
-        console.log('você jogou ' + pessoa)
-        console.log('a máquina jogou ' + maquina)
-        console.log('Vitória')
+        yourChoose.innerHTML = `
+        <h3>Você escolheu tesoura:</h3>
+        ${tagIconScissors}
+        `
+        
+        machineChoose.innerHTML = `
+        ${tagIconPaper}
+        <h3>A máquina escolheu papel:</h3>
+        `
+
+        resultadoHTML.innerHTML = `                
+        <h1 class="vitoria">Vitória</h1>
+        `
     }else if(pessoa == 'tesoura' && maquina == 'tesoura'){
-        console.log('você jogou ' + pessoa)
-        console.log('a máquina jogou ' + maquina)
-        console.log('Empate')
-    }else{
-        console.log('erro')
+        yourChoose.innerHTML = `
+        <h3>Você escolheu tesoura:</h3>
+        ${tagIconScissors}
+        `
+        
+        machineChoose.innerHTML = `
+        ${tagIconScissors}
+        <h3>A máquina escolheu tesoura:</h3>
+        `
+
+        resultadoHTML.innerHTML = `                
+        <h1 class="empate">Empate</h1>
+        `
     }
 }

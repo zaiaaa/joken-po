@@ -1,0 +1,47 @@
+.yourChoose{
+    width: 100%;
+    text-align: center;
+}
+.yourChoose i{
+    font-size: 40px;
+    transform: rotate(-180deg);
+}
+.yourChoose .tesoura{
+    transform: rotate(-90deg);
+}
+
+
+.punho{
+    color: red;
+}
+.papel{
+    color: gray;
+}
+.tesoura{
+    color: rgb(53, 53, 231);
+    transform: rotate(90deg);
+}
+#machineChoose{
+    width: 100%;
+    margin-top: 1rem;
+    text-align: center;
+}
+#machineChoose i{
+    font-size: 40px;
+    transform: rotate();
+}
+
+
+.empate{
+    color: gray;
+}
+.derrota{
+    color: red;
+}
+.vitoria{
+    color: green;
+}
+#result{
+    text-align: center;
+    width: 100%;
+}
