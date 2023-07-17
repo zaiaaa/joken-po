@@ -4,6 +4,10 @@ const tesoura = document.getElementById('tesoura')
 const yourChoose = document.getElementById('yourChoose')
 const machineChoose = document.getElementById('machineChoose')
 const resultadoHTML = document.getElementById('Result')
+const placar = document.getElementById('placar')
+const contadorEmpate = document.getElementById('empateCount')
+const contadorDerrota = document.getElementById('derrotaCount')
+const contadorVitoria = document.getElementById('vitoriaCount')
 
 const tagIconRock = '<i id="punho" class="fa-solid fa-hand-back-fist punho"></i>'
 const tagIconPaper = '<i class="fa-solid fa-hand papel"></i>'
@@ -42,6 +46,11 @@ function maquinaEscolheu(){
     return escolhasMaquina[sorteio]
 }
 
+let vitorias = 0
+let empates = 0
+let derrotas = 0
+
+
 function resultado(pessoa, maquina){
     //caso o usuário escolha pedra
     if(pessoa == 'pedra' & maquina == 'pedra'){
@@ -58,6 +67,10 @@ function resultado(pessoa, maquina){
         resultadoHTML.innerHTML = `                
         <h1 class="empate">Empate</h1>
         `
+        empates++
+
+        contadorEmpate.innerHTML = empates
+
     }else if (pessoa == 'pedra' && maquina == 'papel'){
         yourChoose.innerHTML = `
         <h3>Você escolheu pedra:</h3>
@@ -72,6 +85,10 @@ function resultado(pessoa, maquina){
         resultadoHTML.innerHTML = `                
         <h1 class="derrota">Derrota</h1>
         `
+        derrotas++
+        contadorDerrota.innerHTML = derrotas
+
+
     }else if(pessoa == 'pedra' && maquina == 'tesoura'){
         yourChoose.innerHTML = `
         <h3>Você escolheu pedra:</h3>
@@ -86,6 +103,11 @@ function resultado(pessoa, maquina){
         resultadoHTML.innerHTML = `                
         <h1 class="vitoria">Vitória</h1>
         `
+
+        vitorias++
+
+        contadorVitoria.innerHTML = vitorias
+
     }//Caso o usuário escolha papel
     else if(pessoa == 'papel' & maquina == 'pedra'){
         yourChoose.innerHTML = `
@@ -101,6 +123,9 @@ function resultado(pessoa, maquina){
         resultadoHTML.innerHTML = `                
         <h1 class="vitoria">Vitória</h1>
         `
+
+        vitorias++
+        contadorVitoria.innerHTML = vitorias
     }else if (pessoa == 'papel' && maquina == 'papel'){
         yourChoose.innerHTML = `
         <h3>Você escolheu papel:</h3>
@@ -115,6 +140,8 @@ function resultado(pessoa, maquina){
         resultadoHTML.innerHTML = `                
         <h1 class="empate">Empate</h1>
         `
+        empates++
+        contadorEmpate.innerHTML = empates
     }else if(pessoa == 'papel' && maquina == 'tesoura'){
         
         yourChoose.innerHTML = `
@@ -130,6 +157,9 @@ function resultado(pessoa, maquina){
         resultadoHTML.innerHTML = `                
         <h1 class="derrota">Derrota</h1>
         `
+
+        derrotas++
+        contadorDerrota.innerHTML = derrotas
     }//Caso o usuário escolha tesoura
     else if(pessoa == 'tesoura' & maquina == 'pedra'){
         yourChoose.innerHTML = `
@@ -145,6 +175,9 @@ function resultado(pessoa, maquina){
         resultadoHTML.innerHTML = `                
         <h1 class="derrota">Derrota</h1>
         `
+
+        derrotas++
+        contadorDerrota.innerHTML = derrotas
     }else if (pessoa == 'tesoura' && maquina == 'papel'){
         yourChoose.innerHTML = `
         <h3>Você escolheu tesoura:</h3>
@@ -159,6 +192,10 @@ function resultado(pessoa, maquina){
         resultadoHTML.innerHTML = `                
         <h1 class="vitoria">Vitória</h1>
         `
+
+        vitorias++
+
+        contadorVitoria.innerHTML = vitorias
     }else if(pessoa == 'tesoura' && maquina == 'tesoura'){
         yourChoose.innerHTML = `
         <h3>Você escolheu tesoura:</h3>
@@ -173,5 +210,8 @@ function resultado(pessoa, maquina){
         resultadoHTML.innerHTML = `                
         <h1 class="empate">Empate</h1>
         `
+        empates++
+
+        contadorEmpate.innerHTML = empates
     }
 }

@@ -10,7 +10,6 @@
     transform: rotate(-90deg);
 }
 
-
 .punho{
     color: red;
 }
@@ -34,14 +33,32 @@
 
 .empate{
     color: gray;
+    text-align: center;
 }
 .derrota{
     color: red;
+    text-align: center;
 }
 .vitoria{
     color: green;
+    text-align: center;
 }
 #result{
     text-align: center;
     width: 100%;
+}
+
+#placar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+}
+#placar span{
+    margin: 0 1rem 0 .125rem;
+    font-size: 1.325rem;
+}
+.resultados{
+    display: flex;
+    flex-direction: column;
 }
